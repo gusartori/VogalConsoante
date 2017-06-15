@@ -28,18 +28,27 @@ Para isso utilizei uma LinkedHashMap, onde as chaves são somente as vogais enco
 Assim, todas as vogais encontradas são inseridas nessa estrutura juntamente com a lista de todos os caracteres antecessores. Caso essa vogal já esteja nesse LinkedHashMap, a sua lista de antecessores é zerada; fiz dessa forma pois se a vogal se repete ela não pode ser mais considerada como uma resposta válida; marcar com uma lista vazia é uma forma de manter esse histórico.
 
 # Executando a busca da sequência (vogal->consoante->vogal)
+Num segundo momento é feito a busca na estrutura de dados acima. Como se trata de uma LinkedHashpMap, os valores chaves estão ordenados o que vai de encontro com o requisito "primeira voga". 
+Para fazer a checagem se é vogal ou consoante criei uma classe utilitária que utiliza expressão regular para isso.
+
+## Compilar
+
+Para compilar o projeto basta baixá-lo em sua máquina com Java 8 instalado, navegar para o diretório src/main/java e em seguida executar o seguinte comando:
+
+```
+javac com/project/Application.java
+```
 
 
+## Testes
+Criei uma classe de testes com diversos cenários para a Stream.
+Para executar os testes na linha de comando:
+```
 
-Esta aplicação foi construída utilizando Spring Boot Framework, Spring Data e Spring MVC. Utilizei também banco de dados H2.
-A aplicação está separada por camadas: 
+```
 
-- *model*: as entidades de banco de dados e projeções de output estão aqui;
-- *repository*: a camada de acesso ao banco de dados;
-- *service*: as regras de negócio que são feitas com esses dados;
-- *controller*: a exposição dos serviços e construção de outputs.
-
-Temos então 3 entidades: Campanha, Cliente e Time (utilizada como referência).
-
-Automaticamente são carregados os times de referência através do arquivo data.sql.
-
+## Rodar aplicação
+Para rodar a aplicação no terminal navegar para o diretório src/main/java e em seguida executar o seguinte comando:
+```
+java com/project/Application
+```
