@@ -21,13 +21,13 @@ A leitura é feita na própria classe *main* do projeto e espera-se que o usuár
 
 ## Algoritmo e Estruturas de Dados
 
-# Preparando as estruturas de dados
+### Preparando as estruturas de dados
 Na classe CharacterFinder é onde o algoritmo da busca pela sequência desejada é executado.
 Ao receber a Stream como parâmetro, a primeira tarefa é ler toda a stream e conforme isso vai acontecendo armazenando numa estrutura de dados que facilite a busca pela vogal num segundo momento.
 Para isso utilizei uma LinkedHashMap, onde as chaves são somente as vogais encontradas e os valores são LinkedLists com todos os outros caracteres antecessores.
 Assim, todas as vogais encontradas são inseridas nessa estrutura juntamente com a lista de todos os caracteres antecessores. Caso essa vogal já esteja nesse LinkedHashMap, a sua lista de antecessores é zerada; fiz dessa forma pois se a vogal se repete ela não pode ser mais considerada como uma resposta válida; marcar com uma lista vazia é uma forma de manter esse histórico.
 
-# Executando a busca da sequência (vogal->consoante->vogal)
+### Executando a busca da sequência (vogal->consoante->vogal)
 Num segundo momento é feito a busca na estrutura de dados acima. Como se trata de uma LinkedHashpMap, os valores chaves estão ordenados o que vai de encontro com o requisito "primeira voga". 
 Para fazer a checagem se é vogal ou consoante criei uma classe utilitária que utiliza expressão regular para isso.
 
