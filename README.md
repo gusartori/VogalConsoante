@@ -1,4 +1,4 @@
-# Buscar vogal (única) precedida de consoante precidida de vogal
+# Buscar vogal (única) precedida de consoante precedida de vogal
 
 
 Projeto que implementa um algoritmo para buscar em uma dada entrada se existem uma vogal que é precedida por uma consoante que é precedida por uma vogal.
