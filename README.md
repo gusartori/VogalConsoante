@@ -1,8 +1,8 @@
 # Buscar vogal (única) precedida de consoante precidida de vogal
 
 
-Projeto que implementa um algoritmo para buscar em uma dada entrada se existem uma vogal que é precedida por uma consoante que é precedida por uma volga.
-Essa volga não pode ter ocorrido em nenhum momento, desta forma ela é única.
+Projeto que implementa um algoritmo para buscar em uma dada entrada se existem uma vogal que é precedida por uma consoante que é precedida por uma vogal.
+Essa vogal não pode ter ocorrido em nenhum momento, desta forma ela é única. A aplicação foi desenvolvida em Java 8.
 
 ## Input (Entrada)
 
@@ -33,22 +33,27 @@ Para fazer a checagem se é vogal ou consoante criei uma classe utilitária que 
 
 ## Compilar
 
-Para compilar o projeto basta baixá-lo em sua máquina com Java 8 instalado, navegar para o diretório src/main/java e em seguida executar o seguinte comando:
+Para facilitar as operações de compilar, testar e rodar a aplicação utilizei o Ant. Dessa forma basta ter ele instalado em sua máquina para rodar os comando a seguir. Não se esqueça de alterar a seguinte linha no arquivo build.xml para a configuração local:
+```
+<property name="jdk.home.1.8" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home"/>
+```
+
+Para compilar:
 
 ```
-javac com/project/Application.java
+ant all  
 ```
-
 
 ## Testes
-Criei uma classe de testes com diversos cenários para a Stream.
+Criei uma classe de testes com diversos cenários para a Stream de entrada.
 Para executar os testes na linha de comando:
 ```
-
+ant test
 ```
 
 ## Rodar aplicação
-Para rodar a aplicação no terminal navegar para o diretório src/main/java e em seguida executar o seguinte comando:
+Para rodar a aplicação no terminal navegar para o diretório src/main/java deste projeto e em seguida executar o seguinte comando:
 ```
-java com/project/Application
+ant run
 ```
+Em seguida basta seguir as instruções que aparecem no cosole onde você poderá digitar o input a ser analisado.

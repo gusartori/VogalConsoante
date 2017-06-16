@@ -1,7 +1,7 @@
 package com.project.util;
 
-import com.project.model.Stream;
 import com.project.exception.VowelNotFoundException;
+import com.project.model.Stream;
 
 import java.util.*;
 
